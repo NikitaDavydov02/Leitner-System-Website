@@ -4,6 +4,9 @@ $contentWidth:75%;
 	color:white;
 	font-family: 'OpenSans', 'Arial';
 }
+body{
+	overflow-x: hidden;
+}
 .wrapper {
 	width: 100%;
 }
@@ -43,12 +46,17 @@ $contentWidth:75%;
 	justify-content: center;
 	align-items: center;
 }
+.navigationbar__item:hover{
+	text-shadow: 0 0 1rem white;
+	transform: scale(1.1);
+}
 .mainBlock__content {
 	display: flex;
 	max-width: $contentWidth;
 	flex-direction:column;
 	align-content: center;
-	justify-content: center;;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
 	top:50%;
 	left:50%;
@@ -67,19 +75,109 @@ $contentWidth:75%;
 	margin: 10px auto;
 }
 .downloadButton {
-	min-width:200px;
-	padding: 10px;
-	text-align:center;
-	height: 4rem;
+	width: 80%;
+	min-height: 4rem;
 	border-radius: 15px;
+	padding: 10px;
+	background-color: #bda4ff;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.downloadButton:hover p{
+	color: #51504e;
+}
+.downloadButton:hover{
+	background: white;
+	transform: scale(1.1);
+	transition-duration: 500ms;
+	box-shadow: white 0px 0px 10px;
+}
+.downloadButton__mainText {
 	font-size: 2rem;
 	font-weight: 500;
-	background-color: #bda4ff;
-	margin:10px auto;
+	margin: 0 0 10px 0;
 }
-.mainBlock__listOfAdvantagesContainer {}
-.mainBlock__listOfAdvantages {}
-.mainBlock__listOfAdvantagesItem {}
+.downloadButton__sunText {
+	font-size: 1rem;
+	font-weight: 300;
+}
+.mainBlock_downloadButton{
+	margin: 20px 0;
+
+}
+.mainBlock__listOfAdvantagesContainer {
+	margin: 10px;
+}
+.mainBlock__listOfAdvantagesItem {
+	font-size: 1.5rem;
+	font-weight: 300;
+	margin: 0 0 10px 0;
+	position: relative;
+	list-style-type: circle;
+}
+.mainBlock__listOfAdvantagesItem::before {
+	content: '';
+	background-image: url('../img/tick.png');
+	height: 1.5rem;
+	display: block;
+	position: absolute;
+	top:0;
+	left:-3rem;
+}
+.mainBlock__listOfAdvantagesItem:last-child {
+	margin: 0px;
+}
+.card{
+	width:40vh;
+	height:64vh;
+	border-radius: 20px;
+	position: absolute;
+}
+.card_pink{
+	background-color: #bda4ff;
+}
+.card_white{
+	background-color: white;
+}
+.card1{
+	transform: rotate(10deg);
+	left:0;
+	top:20%;
+}
+.card2{
+	transform: rotate(20deg);
+	left:0;
+	top:50%;
+}
+.card3{
+	transform: rotate(60deg);
+	left:10%;
+	top:70%;
+}
+.card4{
+	transform: rotate(-5deg);
+	right:5%;
+	top:25%;
+}
+.card5{
+	transform: rotate(-15deg);
+	right:10%;
+	top:50%;
+}
+.card6{
+	transform: rotate(-45deg);
+	right:10%;
+	top:70%;
+}
+.card7{
+	transform: rotate(5deg);
+	right:-5%;
+	top:40%;
+}
+
 .secondBlock {
 	background: white;
 }
