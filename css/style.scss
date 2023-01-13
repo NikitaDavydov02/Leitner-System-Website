@@ -16,6 +16,7 @@ $contentWidth:75%;
 }
 .mainBlock {
 	background: #51504e;
+	position: relative;
 }
 .footer {
 	background: #51504e;
@@ -42,31 +43,40 @@ $contentWidth:75%;
 	justify-content: center;
 	align-items: center;
 }
-.mainBlock__container {
-	display: flex;
-	max-width: $contentWidth;
-	justify-content: center;
-	align-content: center;
-	margin:0 auto;
-}
 .mainBlock__content {
 	display: flex;
+	max-width: $contentWidth;
 	flex-direction:column;
 	align-content: center;
+	justify-content: center;;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
 }
 .mainBlock__title {
 	font-size: 3rem;
 	font-weight: 500;
-	margin: 0 auto;
 	text-align: center;
+	margin: 10px auto;
 }
 .mainBlock__subtitle {
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-align: center;
+	margin: 10px auto;
+}
+.downloadButton {
+	min-width:200px;
+	padding: 10px;
+	text-align:center;
+	height: 4rem;
+	border-radius: 15px;
 	font-size: 2rem;
 	font-weight: 500;
-	margin: 0 auto;
-	text-align: center;
+	background-color: #bda4ff;
+	margin:10px auto;
 }
-.downloadButton {}
 .mainBlock__listOfAdvantagesContainer {}
 .mainBlock__listOfAdvantages {}
 .mainBlock__listOfAdvantagesItem {}
