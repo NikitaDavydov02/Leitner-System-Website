@@ -1,3 +1,75 @@
+@import 'NullFileCSS.scss';
+$contentWidth:75%;
 *{
-	color:red;
+	color:white;
+	font-family: 'OpenSans', 'Arial';
+}
+.wrapper {
+	width: 100%;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+}
+.fullScreenBlock {
+	height: 100vh;
+}
+.mainBlock {
+	background: #51504e;
+}
+.footer {
+	background: #51504e;
+}
+.navigatonbar {
+	height: 10%;
+	width: 100%;
+}
+.navigationbat__container {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	max-width: $contentWidth;
+	margin: 0 auto;
+	/*max width shoild be removed*/
+}
+.navigationbar__item {
+	flex:1 1 auto;
+	font-size: 1.5rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.mainBlock__container {
+	display: flex;
+	max-width: $contentWidth;
+	justify-content: center;
+	align-content: center;
+	margin:0 auto;
+}
+.mainBlock__content {
+	display: flex;
+	flex-direction:column;
+	align-content: center;
+}
+.mainBlock__title {
+	font-size: 3rem;
+	font-weight: 500;
+	margin: 0 auto;
+	text-align: center;
+}
+.mainBlock__subtitle {
+	font-size: 2rem;
+	font-weight: 500;
+	margin: 0 auto;
+	text-align: center;
+}
+.downloadButton {}
+.mainBlock__listOfAdvantagesContainer {}
+.mainBlock__listOfAdvantages {}
+.mainBlock__listOfAdvantagesItem {}
+.secondBlock {
+	background: white;
 }
