@@ -289,6 +289,10 @@ body {
   background-color: white;
 }
 
+.card_grey {
+  background-color: #51504e;
+}
+
 .card1 {
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
@@ -441,10 +445,62 @@ body {
 }
 
 .firstCardInSecondBlock {
+  top: 20%;
+  left: 65%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.secondCardInSecondBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   top: 10%;
-  left: 5%;
+  left: 55%;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transform: rotate(5deg);
           transform: rotate(5deg);
+}
+
+.secondCardInSecondBlock__content {
+  display: none;
+  padding: 10px;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.thirdCardInSecondBlock {
+  top: 32%;
+  left: 70%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.cardShadow {
+  -webkit-box-shadow: 0 0 15px black;
+          box-shadow: 0 0 15px black;
+}
+
+.secretCard:hover div {
+  display: block;
+}
+
+.thirdBlock {
+  background-color: #51504e;
+  z-index: 2;
 }

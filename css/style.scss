@@ -149,6 +149,9 @@ body{
 .card_white{
 	background-color: white;
 }
+.card_grey{
+	background-color: #51504e;
+}
 .card1{
 	transform: rotate(10deg);
 	left:0;
@@ -257,8 +260,44 @@ body{
 	border-radius: 20px;
 }
 .firstCardInSecondBlock{
+	top: 20%;
+	left: 65%;
+	transform-origin: center;
+	transform: rotate(40deg);
+}
+.secondCardInSecondBlock{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
 	top: 10%;
-	left: 5%;
+	left: 55%;
 	transform-origin: center;
 	transform: rotate(5deg);
+	
+}
+.secondCardInSecondBlock__content{
+	display: none;
+	padding: 10px;
+	text-align: center;
+	font-size: 2rem;
+	color:white;
+}
+.thirdCardInSecondBlock{
+	top: 32%;
+	left: 70%;
+	transform-origin: center;
+	transform: rotate(60deg);
+}
+.cardShadow{
+	box-shadow: 0 0 15px black;
+}
+.secretCard:hover{
+	& div{
+		display: block;
+	}
+}
+.thirdBlock{
+	background-color:#51504e; 
+	z-index: 2;
 }
