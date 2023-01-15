@@ -1,0 +1,46 @@
+@import 'NullFileCSS.scss';
+$contentWidth:75%;
+*{
+	font-family: 'OpenSans', 'Arial';
+}
+body{
+	overflow-x: hidden;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+}
+.wrapper {
+	width: 100%;
+}
+.fullScreenBlock {
+	height: 100vh;
+}
+.text {
+	z-index: 2;
+	pointer-events: none;
+}
+.background {
+	background-image: url('../img/background.jpg');
+	background-position: cover;
+	background-repeat: no-repeat;
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+.secondBlock{
+	background: white;
+	z-index: 2;
+}
+.button{
+	display: block;
+	width: 100px;
+	height: 50px;
+	background-color: green;
+	border-radius: 10px;
+}
+.button:hover{
+	background-color: red;
+}
