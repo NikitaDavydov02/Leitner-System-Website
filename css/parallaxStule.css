@@ -94,6 +94,7 @@ body {
 
 .fullScreenBlock {
   height: 100vh;
+  width: 100vw;
 }
 
 .text {

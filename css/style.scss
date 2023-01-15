@@ -189,8 +189,10 @@ body{
 	background: white;
 	z-index: 2;
 	position: relative;
+	color: black;
 }
 .secondBlock::before{
+
 	content: '';
 	width: 100%;
 	height: 50px;
@@ -199,4 +201,64 @@ body{
 	left:0;
 	transform:translate(0px,-100%);
 	background: linear-gradient(0deg, white, rgba(0,0,0,0));
+}
+.secondBlock__grid {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	height: 90vh;
+	margin: 5vh auto;
+	justify-items: center;
+	align-items: center;	
+}
+.contentWodthLimit{
+	max-width:60%;
+}
+.titleWrapper{
+	color: #51504e;
+	font-size: 3rem;
+	font-weight: 600;
+}
+.secondBlock__firstCardWrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.secondBlock__listOfActionsWrapper {
+}
+.secondBlock__secondCardWrapper {}
+.listOfActions{
+}
+.listOfActions li{
+	color: #51504e;
+	font-size: 2rem;
+	text-align: left;
+	margin: 0 20px 20px 0;
+	position: relative;
+}
+.listOfActions::last-child{
+		margin: 0 0 0 0;
+}
+.listOfActions li::before{
+	content: '';
+	position: absolute;
+	background-image: url('../img/tick.png');
+	background-size: cover;
+	top: 0;
+	left: -4rem;
+	width: 2rem;
+	height: 2rem;
+	display: block;
+}
+.smallCard{
+	height: 40vh;
+	width:27vh;
+	border-radius: 20px;
+}
+.firstCardInSecondBlock{
+	top: 10%;
+	left: 5%;
+	transform-origin: center;
+	transform: rotate(5deg);
 }

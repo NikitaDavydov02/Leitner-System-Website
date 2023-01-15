@@ -342,6 +342,7 @@ body {
   background: white;
   z-index: 2;
   position: relative;
+  color: black;
 }
 
 .secondBlock::before {
@@ -355,4 +356,95 @@ body {
           transform: translate(0px, -100%);
   background: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(0deg, white, rgba(0, 0, 0, 0));
+}
+
+.secondBlock__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 90vh;
+  margin: 5vh auto;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.secondBlock__grid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.secondBlock__grid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.secondBlock__grid > *:nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.secondBlock__grid > *:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.contentWodthLimit {
+  max-width: 60%;
+}
+
+.titleWrapper {
+  color: #51504e;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.secondBlock__firstCardWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.listOfActions li {
+  color: #51504e;
+  font-size: 2rem;
+  text-align: left;
+  margin: 0 20px 20px 0;
+  position: relative;
+}
+
+.listOfActions::last-child {
+  margin: 0 0 0 0;
+}
+
+.listOfActions li::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/tick.png");
+  background-size: cover;
+  top: 0;
+  left: -4rem;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+
+.smallCard {
+  height: 40vh;
+  width: 27vh;
+  border-radius: 20px;
+}
+
+.firstCardInSecondBlock {
+  top: 10%;
+  left: 5%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
 }
