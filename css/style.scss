@@ -1,5 +1,6 @@
 @import 'NullFileCSS.scss';
 $contentWidth:75%;
+$grey:#51504e;
 *{
 	color:white;
 	font-family: 'OpenSans', 'Arial';
@@ -27,9 +28,6 @@ body{
 .mainBlock__foreground{
 	z-index: 2;
 	pointer-events: none;
-}
-.footer {
-	background: #51504e;
 }
 .navigatonbar {
 	height: 10%;
@@ -219,9 +217,14 @@ body{
 	max-width:60%;
 }
 .titleWrapper{
-	color: #51504e;
 	font-size: 3rem;
 	font-weight: 600;
+}
+.greyText{
+	color: #51504e;
+}
+.whiteText{
+	color:white;
 }
 .secondBlock__firstCardWrapper {
 	position: relative;
@@ -298,6 +301,123 @@ body{
 	}
 }
 .thirdBlock{
-	background-color:#51504e; 
+	/*background-color:#51504e; */
+	background-color: white;
 	z-index: 2;
+	position: relative;
+}
+.thirdBlock__grid {
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	height: 90vh;
+	margin: 5vh auto;
+	justify-items: center;
+	align-items: center;	
+}
+.titleWrapper {}
+.whiteText {}
+.thirdBlock__firstCardWrapper {}
+.thirdBlock__listOfActionsWrapper {}
+.thirdBlock__secondCardWrapper {}
+.leitnerSystemImage{
+	width:100%;
+	margin: 0 auto;
+}
+.leitnerSystemAppBlock{
+	background-color: #51504e;
+	z-index: 2;
+	position: relative;
+}
+.border{
+	position: absolute;
+	width: 80%;
+	min-height: 1px;
+	background-color:#51504e;
+	top:0;
+	left: 50%;
+	transform-origin: center;
+	transform: translateX(-50%);
+}
+.leitnerSystemAppBlockGrid {
+	display: grid;
+	width: 80%;
+	margin: 5% auto;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 6fr;
+	grid-template-areas: "title title"
+						"first second";
+	justify-content: center;
+	align-items: center;
+}
+.leitnerSystemAppBlockGrid__title {
+	font-size: 3rem;
+	font-weight: 600;
+	text-align: left;
+	color: white;
+	grid-area: title;
+}
+.leitnerSystemAppBlockGrid__firstScreenWrapper {}
+.leitnerSystemAppBlockGrid__secondScreenWrapper {}
+.leitnerSystemAppBlockGrid__firstScreen{
+	max-width: 55%;
+	position: absolute;
+	top:21%;
+	left: 5%;
+	z-index: 3;
+    box-shadow: 0 0 40px white;
+}
+.leitnerSystemAppBlockGrid__secondScreen{
+	max-width: 55%;
+	position: absolute;
+	top:24%;
+	right: 5%;
+	z-index: 3;
+	box-shadow: 0 0 40px white;
+}
+.lastScreen {
+	background-color: #51504e;
+	height: 30vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}
+.lastScreen__content {
+	width: 40%;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
+	justify-items: center;
+}
+.lastScreen__buttonCell {}
+.lastScreen__subtext {
+	font-size: 2.5rem;
+	font-weight: 500;
+	text-align: left;
+	margin: 0 auto;
+	color:#bda4ff;
+	text-shadow: 0px 0px 200px #bda4ff;
+}
+
+.footer {
+	background: white;
+	z-index: 2;
+	min-height:10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.downloadButton_shadow{
+	box-shadow: 0 0 100px 30px #bda4ff;
+}
+.footer__content {
+
+}
+.footer__copyright {
+	font-size: 1rem;
+	text-align: center;
+	margin: 0 auto;
+	color:#51504e;
 }
