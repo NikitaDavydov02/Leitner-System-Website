@@ -103,6 +103,13 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .mainBlock__foreground {
@@ -111,7 +118,6 @@ body {
 }
 
 .navigatonbar {
-  height: 10%;
   width: 100%;
 }
 
@@ -124,7 +130,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 75%;
-  margin: 0 auto;
+  margin: 30px auto;
   /*max width shoild be removed*/
 }
 
@@ -156,6 +162,22 @@ body {
           transform: scale(1.1);
 }
 
+.mainBlock__contentWrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .mainBlock__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,11 +195,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  max-width: 400px;
+  /*position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);*/
 }
 
 .mainBlock__title {
@@ -271,8 +293,8 @@ body {
 }
 
 .card {
-  width: 40vh;
-  height: 64vh;
+  width: 20vw;
+  height: 32vw;
   border-radius: 20px;
   position: absolute;
 }
@@ -567,6 +589,7 @@ body {
   z-index: 2;
   position: relative;
   color: black;
+  width: 100%;
 }
 
 .secondBlock::before {
@@ -643,7 +666,7 @@ body {
 
 .listOfActions li {
   color: #51504e;
-  font-size: 2rem;
+  font-size: 2em;
   text-align: left;
   margin: 0 20px 20px 0;
   position: relative;
@@ -919,4 +942,51 @@ body {
   text-align: center;
   margin: 0 auto;
   color: #51504e;
+}
+
+@media (max-width: 1200px) {
+  .card5 {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .listOfActions li {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 750px) {
+  .card4 {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .secondBlock__grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .thirdCardInSecondBlock {
+    display: none;
+  }
+  .firstCardInSecondBlock {
+    display: none;
+  }
+  .secondCardInSecondBlock {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .card2 {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  .card1, .card3, .card6, .card7 {
+    display: none;
+  }
+}
+/*----------------------------*/
+@media (max-height: 450px) {
+  .mainBlock__listOfAdvantagesContainer {
+    display: none;
+  }
 }

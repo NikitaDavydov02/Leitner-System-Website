@@ -24,13 +24,15 @@ body{
 	top: 0;
 	left: 0;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+
 }
 .mainBlock__foreground{
 	z-index: 2;
 	pointer-events: none;
 }
 .navigatonbar {
-	height: 10%;
 	width: 100%;
 }
 .navigationbat__container {
@@ -38,7 +40,7 @@ body{
 	height: 100%;
 	justify-content: center;
 	max-width: $contentWidth;
-	margin: 0 auto;
+	margin: 30px auto;
 	/*max width shoild be removed*/
 }
 .navigationbar__item {
@@ -55,17 +57,26 @@ body{
 	text-shadow: 0 0 1rem white;
 	transform: scale(1.1);
 }
+.mainBlock__contentWrapper{
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .mainBlock__content {
+	
 	display: flex;
 	max-width: $contentWidth;
 	flex-direction:column;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
-	position: absolute;
+	max-width: 400px;
+	/*position: absolute;
 	top:50%;
 	left:50%;
-	transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);*/
 }
 .mainBlock__title {
 	font-size: 3rem;
@@ -136,8 +147,8 @@ body{
 	margin: 0px;
 }
 .card{
-	width:40vh;
-	height:64vh;
+	width:20vw;
+	height:32vw;
 	border-radius: 20px;
 	position: absolute;
 }
@@ -278,6 +289,7 @@ body{
 	z-index: 2;
 	position: relative;
 	color: black;
+	width: 100%;
 }
 .secondBlock::before{
 
@@ -325,7 +337,7 @@ body{
 }
 .listOfActions li{
 	color: #51504e;
-	font-size: 2rem;
+	font-size: 2em;
 	text-align: left;
 	margin: 0 20px 20px 0;
 	position: relative;
@@ -522,4 +534,49 @@ body{
 	text-align: center;
 	margin: 0 auto;
 	color:#51504e;
+}
+@media (max-width: 1200px){
+	.card5{
+		display: none;
+	}
+}
+@media (max-width: 800px){
+	.listOfActions li{
+		font-size: 1.5rem;
+	}
+}
+@media (max-width: 750px){
+	.card4{
+		display: none;
+	}
+}
+@media (max-width: 700px){
+	.secondBlock__grid{
+		grid-template-columns: 1fr;
+	}
+	.thirdCardInSecondBlock{
+		display: none;
+	}
+	.firstCardInSecondBlock{
+		display: none;
+	}
+	.secondCardInSecondBlock{
+		display: none;
+	}
+}
+@media (max-width: 600px){
+	.card2{
+		display: none;
+	}
+}
+@media (max-width: 550px){
+	.card1, .card3, .card6, .card7{
+		display: none;
+	}
+}
+/*----------------------------*/
+@media (max-height: 450px){
+	.mainBlock__listOfAdvantagesContainer{
+		display: none;
+	}
 }
