@@ -337,7 +337,7 @@ body{
 }
 .listOfActions li{
 	color: #51504e;
-	font-size: 2em;
+	font-size: 2rem;
 	text-align: left;
 	margin: 0 20px 20px 0;
 	position: relative;
@@ -575,8 +575,16 @@ body{
 	}
 }
 /*----------------------------*/
-@media (max-height: 450px){
+@media (max-height: 500px){
 	.mainBlock__listOfAdvantagesContainer{
 		display: none;
+	}
+	.listOfActions li{
+		font-size: 1rem;
+	}
+}
+@media (max-height: 350px){
+	.listOfActions li{
+		font-size: 0.8rem;
 	}
 }
