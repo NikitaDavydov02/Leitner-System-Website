@@ -290,54 +290,278 @@ body {
 }
 
 .card1 {
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-  left: 0;
-  top: 20%;
+  -webkit-animation-name: card1;
+          animation-name: card1;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .card2 {
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-  left: 0;
-  top: 50%;
+  -webkit-animation-name: card2;
+          animation-name: card2;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes card1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    left: -40vh;
+    top: 15%;
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    left: 0;
+    top: 20%;
+  }
+}
+
+@keyframes card1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    left: -40vh;
+    top: 15%;
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    left: 0;
+    top: 20%;
+  }
+}
+@-webkit-keyframes card2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    left: -40vh;
+    top: 40%;
+  }
+  100% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+    left: 0;
+    top: 50%;
+  }
+}
+@keyframes card2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    left: -40vh;
+    top: 40%;
+  }
+  100% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+    left: 0;
+    top: 50%;
+  }
+}
 .card3 {
-  -webkit-transform: rotate(60deg);
-          transform: rotate(60deg);
-  left: 10%;
-  top: 70%;
+  -webkit-animation-name: card3;
+          animation-name: card3;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes card3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    left: -40vh;
+    top: 60%;
+  }
+  100% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+    left: 10%;
+    top: 70%;
+  }
+}
+
+@keyframes card3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    left: -40vh;
+    top: 60%;
+  }
+  100% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+    left: 10%;
+    top: 70%;
+  }
+}
 .card4 {
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
-  right: 5%;
-  top: 25%;
+  -webkit-animation-name: card4;
+          animation-name: card4;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
+@-webkit-keyframes card4 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    right: -40vh;
+    top: 20%;
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+    right: 5%;
+    top: 25%;
+  }
+}
+
+@keyframes card4 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    right: -40vh;
+    top: 20%;
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+    right: 5%;
+    top: 25%;
+  }
+}
 .card5 {
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
-  right: 10%;
-  top: 50%;
+  -webkit-animation-name: card5;
+          animation-name: card5;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
+@-webkit-keyframes card5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    right: -40vh;
+    top: 40%;
+  }
+  100% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+    right: 10%;
+    top: 50%;
+  }
+}
+
+@keyframes card5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    right: -40vh;
+    top: 40%;
+  }
+  100% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+    right: 10%;
+    top: 50%;
+  }
+}
 .card6 {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  right: 10%;
-  top: 70%;
+  -webkit-animation-name: card6;
+          animation-name: card6;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
+@-webkit-keyframes card6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    right: -40vh;
+    top: 60%;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    right: 10%;
+    top: 70%;
+  }
+}
+
+@keyframes card6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    right: -40vh;
+    top: 60%;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    right: 10%;
+    top: 70%;
+  }
+}
 .card7 {
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
-  right: -5%;
-  top: 40%;
+  -webkit-animation-name: card7;
+          animation-name: card7;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
+@-webkit-keyframes card7 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    right: -40vh;
+    top: 30%;
+  }
+  100% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+    right: -5%;
+    top: 40%;
+  }
+}
+
+@keyframes card7 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    right: -40vh;
+    top: 30%;
+  }
+  100% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+    right: -5%;
+    top: 40%;
+  }
+}
 .secondBlock {
   background: white;
   z-index: 2;
@@ -441,6 +665,11 @@ body {
   display: block;
 }
 
+.listOfActions li:hover::before {
+  -webkit-box-shadow: #bda4ff 0 0 30px 5px;
+          box-shadow: #bda4ff 0 0 30px 5px;
+}
+
 .smallCard {
   height: 40vh;
   width: 27vh;
@@ -478,11 +707,13 @@ body {
 }
 
 .secondCardInSecondBlock__content {
-  display: none;
+  opacity: 0;
   padding: 10px;
   text-align: center;
   font-size: 2rem;
   color: white;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .thirdCardInSecondBlock {
@@ -499,10 +730,18 @@ body {
           box-shadow: 0 0 15px black;
 }
 
-.secretCard:hover div {
-  display: block;
+.secreteCard {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
+.secretCard:hover div {
+  opacity: 1;
+}
+
+@-webkit-keyframes secretCard {}
+
+@keyframes secretCard {}
 .thirdBlock {
   /*background-color:#51504e; */
   background-color: white;
