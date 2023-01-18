@@ -95,8 +95,12 @@ body {
 
 .fullScreenBlock {
   height: 100vh;
+  width: 100%;
 }
 
+/*--------------------------------------------*/
+/*---------------MAIN BLOCK-------------------*/
+/*--------------------------------------------*/
 .mainBlock {
   background: #51504e;
   position: fixed;
@@ -131,7 +135,6 @@ body {
           justify-content: center;
   max-width: 75%;
   margin: 30px auto;
-  /*max width shoild be removed*/
 }
 
 .navigationbar__item {
@@ -154,6 +157,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .navigationbar__item:hover {
@@ -196,10 +201,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 400px;
-  /*position: absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);*/
 }
 
 .mainBlock__title {
@@ -257,7 +258,7 @@ body {
   margin: 0 0 10px 0;
 }
 
-.downloadButton__sunText {
+.downloadButton__subText {
   font-size: 1rem;
   font-weight: 300;
 }
@@ -275,13 +276,16 @@ body {
   font-weight: 300;
   margin: 0 0 10px 0;
   position: relative;
-  list-style-type: circle;
+  /*list-style-type: circle;*/
 }
 
 .mainBlock__listOfAdvantagesItem::before {
   content: "";
   background-image: url("../img/tick.png");
+  background-position: center;
+  background-size: contain;
   height: 1.5rem;
+  width: 1.5rem;
   display: block;
   position: absolute;
   top: 0;
@@ -614,7 +618,7 @@ body {
   grid-template-columns: 1fr 1fr;
   width: 100%;
   height: 90vh;
-  margin: 5vh auto;
+  margin: 5vw auto;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -642,7 +646,7 @@ body {
 }
 
 .contentWodthLimit {
-  max-width: 60%;
+  max-width: 80%;
 }
 
 .titleWrapper {
@@ -777,8 +781,8 @@ body {
   display: grid;
   -ms-grid-rows: 1fr 2fr;
   grid-template-rows: 1fr 2fr;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr;
   width: 100%;
   height: 90vh;
   margin: 5vh auto;
@@ -944,6 +948,10 @@ body {
   color: #51504e;
 }
 
+.additionalImage {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .card5 {
     display: none;
@@ -964,6 +972,30 @@ body {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+  .thirdBlock__grid {
+    display: block;
+  }
+  .titleWrapper {
+    margin: 10px auto;
+    text-align: left;
+  }
+  .thirdBlock__listOfActionsWrapper {
+    margin: 10px auto;
+  }
+  .thirdBlock__secondCardWrapper {
+    display: none;
+  }
+  .additionalImage {
+    z-index: 2;
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    background-color: white;
+    padding: 10%;
+  }
+  .contentWodthLimit {
+    max-width: 60%;
+  }
   .thirdCardInSecondBlock {
     display: none;
   }
@@ -982,6 +1014,11 @@ body {
 @media (max-width: 550px) {
   .card1, .card3, .card6, .card7 {
     display: none;
+  }
+}
+@media (max-width: 450px) {
+  .listOfActions li {
+    font-size: 1rem;
   }
 }
 /*----------------------------*/
