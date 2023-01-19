@@ -8,6 +8,7 @@ $grey:#51504e;
 body{
 	overflow-x: hidden;
 }
+
 .wrapper {
 	width: 100%;
 }
@@ -18,6 +19,7 @@ body{
 .fullScreenBlock {
 	height: 100vh;
 	width: 100%;
+	overflow: hidden;
 }
 /*--------------------------------------------*/
 /*---------------MAIN BLOCK-------------------*/
@@ -286,6 +288,9 @@ body{
 		top:40%;
 	}
 }
+/*----------------------------------------------*/
+/*---------------SECOND BLOCK-------------------*/
+/*----------------------------------------------*/
 .secondBlock {
 	background: white;
 	z-index: 2;
@@ -309,8 +314,8 @@ body{
 	grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr 1fr;
 	width: 100%;
-	height: 90vh;
-	margin: 5vw auto;
+	height: 90%;
+	margin: 5% auto;
 	justify-items: center;
 	align-items: center;	
 }
@@ -320,22 +325,18 @@ body{
 .titleWrapper{
 	font-size: 3rem;
 	font-weight: 600;
-}
-.greyText{
+	text-align: left;
+	padding: 5%;
 	color: #51504e;
 }
-.whiteText{
-	color:white;
-}
 .secondBlock__firstCardWrapper {
-	position: relative;
-	width: 100%;
-	height: 100%;
 }
 .secondBlock__listOfActionsWrapper {
 }
 .secondBlock__secondCardWrapper {}
 .listOfActions{
+	width: 100%;
+	height: 100%;
 }
 .listOfActions li{
 	color: #51504e;
@@ -410,12 +411,9 @@ body{
 		opacity: 1;
 	}
 }
-@keyframes secretCard{
-	0%{
-
-	}
-
-}
+/*----------------------------------------------*/
+/*---------------THIRD BLOCK-------------------*/
+/*----------------------------------------------*/
 .thirdBlock{
 	/*background-color:#51504e; */
 	background-color: white;
@@ -425,26 +423,19 @@ body{
 .thirdBlock__grid {
 	display: grid;
 	grid-template-rows: 1fr 2fr;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	width: 100%;
-	height: 90vh;
-	margin: 5vh auto;
+	height: 90%;
+	margin: 5% auto;
 	justify-items: center;
 	align-items: center;	
 }
-.titleWrapper {}
-.whiteText {}
 .thirdBlock__firstCardWrapper {}
 .thirdBlock__listOfActionsWrapper {}
 .thirdBlock__secondCardWrapper {}
 .leitnerSystemImage{
 	width:100%;
 	margin: 0 auto;
-}
-.leitnerSystemAppBlock{
-	background-color: #51504e;
-	z-index: 2;
-	position: relative;
 }
 .border{
 	position: absolute;
@@ -456,14 +447,24 @@ body{
 	transform-origin: center;
 	transform: translateX(-50%);
 }
+/*----------------------------------------------*/
+/*------APPLICATION SCREENS BLOCK---------------*/
+/*----------------------------------------------*/
+.leitnerSystemAppBlock{
+	background-color: #51504e;
+	z-index: 2;
+	position: relative;
+}
+
 .leitnerSystemAppBlockGrid {
 	display: grid;
 	width: 80%;
-	margin: 5% auto;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 6fr;
-	grid-template-areas: "title title"
-						"first second";
+	max-height: 100%;
+	margin: 0 auto;
+	grid-template-columns: 1fr;
+	grid-template-rows: minmax(100px auto) auto;
+	grid-template-areas: "title"
+						"images";
 	justify-content: center;
 	align-items: center;
 }
@@ -473,25 +474,54 @@ body{
 	text-align: left;
 	color: white;
 	grid-area: title;
+	padding: 20px;
 }
 .leitnerSystemAppBlockGrid__firstScreenWrapper {}
 .leitnerSystemAppBlockGrid__secondScreenWrapper {}
-.leitnerSystemAppBlockGrid__firstScreen{
-	max-width: 55%;
-	position: absolute;
-	top:21%;
-	left: 5%;
-	z-index: 3;
-    box-shadow: 0 0 40px white;
+.leitnerSystemAppBlockGrid__ScreenWrapper{
+	width: 100%;
+	grid-area: images;
+	position: relative;
 }
-.leitnerSystemAppBlockGrid__secondScreen{
-	max-width: 55%;
+.leitnerSystemAppBlockGrid__secondScreenWrapper{
+	min-width: 100%;
 	position: absolute;
-	top:24%;
-	right: 5%;
+	padding: 0 0 55% 0;
+	z-index: 3;
+	left: 100px;
+    top:100px;
+
+}
+.leitnerSystemAppBlockGrid__secondScreenWrapper img{
+	height: 75%;
+	left: 0;
+	top:0;
+	position: absolute;
 	z-index: 3;
 	box-shadow: 0 0 40px white;
 }
+.leitnerSystemAppBlockGrid__firstScreenWrapper{
+	min-width: 100%;
+	position: absolute;
+	padding: 0 0 55% 0;
+	z-index: 3;
+    left: 0;
+    top:0;
+
+
+}
+.leitnerSystemAppBlockGrid__firstScreenWrapper img{
+	height: 75%;
+	left:0;
+	top:0;
+	position: absolute;
+	z-index: 3;
+	box-shadow: 0 0 40px white;
+}
+/*----------------------------------------------*/
+/*---------DOWNLOAD SCREENS BLOCK---------------*/
+/*----------------------------------------------*/
+
 .lastScreen {
 	background-color: #51504e;
 	height: 30vh;
@@ -537,12 +567,16 @@ body{
 	margin: 0 auto;
 	color:#51504e;
 }
+
 .additionalImage{
 	display: none;
 }
 @media (max-width: 1200px){
 	.card5{
 		display: none;
+	}
+	.thirdBlock__listOfActions li{
+		font-size: 1.5rem;
 	}
 }
 @media (max-width: 800px){
@@ -553,6 +587,14 @@ body{
 @media (max-width: 750px){
 	.card4{
 		display: none;
+	}
+	.leitnerSystemAppBlockGrid__secondScreenWrapper{
+		display: none;
+	}
+	.leitnerSystemAppBlockGrid__firstScreenWrapper img{
+		margin: 5px auto;
+		width: 100%;
+		height: 100%;
 	}
 }
 @media (max-width: 700px){
@@ -578,7 +620,7 @@ body{
 		width: 100%;
 		min-height: 200px;
 		background-color: white;
-		padding: 10%;
+		padding: 0% 10%;
 	}
 	.contentWodthLimit{
 		max-width: 60%;
