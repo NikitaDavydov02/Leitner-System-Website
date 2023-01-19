@@ -5,14 +5,23 @@ $grey:#51504e;
 	color:white;
 	font-family: 'OpenSans', 'Arial';
 }
+html{
+	min-width: 100vw;
+	height: 100%;
+}
 body{
 	overflow-x: hidden;
+	margin:0px;
+	padding:0px;
+	min-width:100%;
+	height: 100%;
 }
 
 .wrapper {
 	width: 100%;
 }
 .container {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
@@ -459,10 +468,10 @@ body{
 .leitnerSystemAppBlockGrid {
 	display: grid;
 	width: 80%;
-	max-height: 100%;
+	min-height: 100%;
 	margin: 0 auto;
 	grid-template-columns: 1fr;
-	grid-template-rows: minmax(100px auto) auto;
+	grid-template-rows: 150px fit-content(80%);
 	grid-template-areas: "title"
 						"images";
 	justify-content: center;
@@ -473,6 +482,7 @@ body{
 	font-weight: 600;
 	text-align: left;
 	color: white;
+	max-height: 150px;
 	grid-area: title;
 	padding: 20px;
 }
@@ -480,6 +490,8 @@ body{
 .leitnerSystemAppBlockGrid__secondScreenWrapper {}
 .leitnerSystemAppBlockGrid__ScreenWrapper{
 	width: 100%;
+	min-height: 100%;
+
 	grid-area: images;
 	position: relative;
 }
@@ -532,6 +544,7 @@ body{
 }
 .lastScreen__content {
 	width: 40%;
+	min-width: 450px;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	align-items: center;
@@ -588,13 +601,33 @@ body{
 	.card4{
 		display: none;
 	}
+	.leitnerSystemAppBlockGrid__firstScreenWrapper{
+		min-width: 100%;
+		max-height: 50%;
+		position: relative;
+		padding: 0 0 55% 0;
+		z-index: 3;
+    	left: 0;
+    	top:0;
+    	margin: 0 auto;
+	}
 	.leitnerSystemAppBlockGrid__secondScreenWrapper{
-		display: none;
+		min-width: 100%;
+		max-height: 50%;
+		position: relative;
+		padding: 0 0 55% 0;
+		z-index: 3;
+    	left: 0;
+    	top:0;
+    	margin: 0 auto;
+	}
+	.leitnerSystemAppBlockGrid__secondScreenWrapper img{
+		margin: 2px auto;
+		object-fit: cover;
 	}
 	.leitnerSystemAppBlockGrid__firstScreenWrapper img{
-		margin: 5px auto;
-		width: 100%;
-		height: 100%;
+		margin: 2px auto;
+		object-fit: cover;
 	}
 }
 @media (max-width: 700px){
@@ -648,6 +681,13 @@ body{
 @media (max-width: 450px){
 	.listOfActions li{
 		font-size: 1rem;
+	}
+	.leitnerSystemAppBlockGrid__title{
+		font-size: 1.5rem;
+	}
+	.lastScreen__content {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
 	}
 }
 /*----------------------------*/
