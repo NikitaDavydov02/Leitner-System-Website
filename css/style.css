@@ -70,6 +70,53 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+.navigatonbar {
+  width: 100%;
+  background: #51504e;
+}
+
+.navigationbat__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 75%;
+  margin: 30px auto;
+}
+
+.navigationbar__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.navigationbar__item:hover {
+  text-shadow: 0 0 1rem white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 * {
   color: white;
   font-family: "OpenSans", "Arial";
@@ -130,52 +177,6 @@ body {
 .mainBlock__foreground {
   z-index: 2;
   pointer-events: none;
-}
-
-.navigatonbar {
-  width: 100%;
-}
-
-.navigationbat__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 75%;
-  margin: 30px auto;
-}
-
-.navigationbar__item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  font-size: 1.5rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-}
-
-.navigationbar__item:hover {
-  text-shadow: 0 0 1rem white;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .mainBlock__contentWrapper {

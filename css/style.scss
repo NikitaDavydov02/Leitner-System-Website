@@ -1,4 +1,5 @@
 @import 'NullFileCSS.scss';
+@import 'navigationBar.scss';
 $contentWidth:75%;
 $grey:#51504e;
 *{
@@ -47,31 +48,7 @@ body{
 	z-index: 2;
 	pointer-events: none;
 }
-.navigatonbar {
-	width: 100%;
-}
-.navigationbat__container {
-	display: flex;
-	height: 100%;
-	justify-content: center;
-	max-width: $contentWidth;
-	margin: 30px auto;
-}
-.navigationbar__item {
-	flex:1 1 auto;
-	font-size: 1.5rem;
-	font-weight: 300;
-	text-transform: uppercase;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	transition-duration: 0.5s;
-}
-.navigationbar__item:hover{
-	text-shadow: 0 0 1rem white;
-	transform: scale(1.1);
-}
+
 .mainBlock__contentWrapper{
 	flex: 1 1 auto;
 	width: 100%;
