@@ -1,0 +1,69 @@
+@import 'NullFileCSS.scss';
+@import 'navigationBar.scss';
+$contentWidth:75%;
+$grey:#51504e;
+$purple:#bda4ff;
+*{
+	color:white;
+	font-family: 'OpenSans', 'Arial';
+}
+*::selection{
+	background-color: #bda4ff;
+}
+p, span{
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin: 10px 0px;
+	text-align: justify;
+}
+ol, ul{
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin: 10px 0px;
+	text-align: left;
+}
+h2{
+	font-size: 2rem;
+	line-height: 3rem;
+	font-weight: 500;
+	margin: 20px 0px;
+	text-align: left;
+}
+.wrapper{
+	;width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%
+	
+}
+.contentWidthConstraint{
+	width: 75%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.container{
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	height: 100%;
+	background-color: #51504e;
+}
+/*-------------------------------------------*/
+/*-----------------FOOTER--------------------*/
+/*-------------------------------------------*/
+.footer {
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 10vh;
+}
+.footer__copyright {
+	font-size: 1rem;
+	text-align: center;
+	margin: 0 auto;
+	color:#51504e;
+}

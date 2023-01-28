@@ -1,0 +1,156 @@
+@import 'NullFileCSS.scss';
+@import 'navigationBar.scss';
+$contentWidth:75%;
+$grey:#51504e;
+$purple:#bda4ff;
+*{
+	color:white;
+	font-family: 'OpenSans', 'Arial';
+}
+*::selection{
+	background-color: #bda4ff;
+}
+p, span{
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin: 10px 0px;
+	text-align: justify;
+}
+ol, ul{
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin: 10px 0px;
+	text-align: left;
+}
+h2{
+	font-size: 2rem;
+	line-height: 3rem;
+	font-weight: 500;
+	margin: 20px 0px;
+	text-align: left;
+}
+.wrapper{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%
+	
+}
+.contentWidthConstraint{
+	width: 75%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.container{
+	width:100%;
+	flex: 1 1 auto;
+	height: 100%;
+	background-color:#51504e;
+}
+.manual{
+	flex: 1 1 auto;
+	padding: 20px 0px;
+}
+/*-------------------------------------------*/
+/*-----------------MAIN WINDOW MANUAL--------*/
+/*-------------------------------------------*/
+.manual__mainWindow {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+.manual__mainWindowImageWrapper {
+	position: relative;
+	padding: 0 0 58% 0;
+}
+.manual__mainWindowImageWrapper img{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 40px white;
+}
+.flexCenter{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.manual__ImportFormatImageWrapper{
+	position: relative;
+	padding: 0 0 50% 0;
+}
+.manual__ImportFormatImageWrapper img{
+	position:absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transform: translateX(-50%);
+	box-shadow: 0 0 40px white;
+}
+.manual__list{
+	width: 100%;
+	height: 100%;
+}
+.manual__list li{
+	color: #51504e;
+	font-size: 2rem;
+	text-align: left;
+	margin: 0 20px 20px 0;
+	position: relative;
+}
+.manual__list::last-child{
+		margin: 0 0 0 0;
+}
+.manual__list li::before{
+	content: '';
+	position: absolute;
+	background-image: url('../img/tick.png');
+	background-size: cover;
+	top: 0;
+	left: -4rem;
+	width: 2rem;
+	height: 2rem;
+	display: block;
+}
+.manual__list li:hover{
+	&::before{
+		box-shadow: #bda4ff 0 0 30px 5px;
+	}
+}
+.inlineImage{
+	display: inline-block;
+	height:1.5rem;
+}
+.inlineImage img{
+	height: 100%;
+}
+/*-------------------------------------------*/
+/*-----------------MAIN WINDOW SETTINGS--------*/
+/*-------------------------------------------*/
+.manual__settings {
+
+}
+.manual__operationsWithDecks {
+
+}
+/*-------------------------------------------*/
+/*-----------------FOOTER--------------------*/
+/*-------------------------------------------*/
+.footer {
+	width: 100%;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 10vh;
+}
+.footer__copyright {
+	font-size: 1rem;
+	text-align: center;
+	margin: 0 auto;
+	color:#51504e;
+}
