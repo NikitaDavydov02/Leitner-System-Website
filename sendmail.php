@@ -8,7 +8,7 @@
 	$mail = new PHPMailer(true);
 	$mail->setLanguage('ru','phpmailer/language/');
 	$mail->IsHTML(true);
-	$mail->setFrom('st085262@student.spbu.ru','A');
+	$mail->setFrom('www@www.com','A');
 	$mail->addAddress('nikita.davidov02@yandex.ru');
 	$mail->Subject('Form website');
 	$body='';
