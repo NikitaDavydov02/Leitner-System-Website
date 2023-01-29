@@ -18,9 +18,11 @@ document.addEventListener('DOMContentLoaded', function () {
             //Send
             let formData = new FormData(form);
             alert('Sending');
-            let responce = await fetch('sendmail.php', { method: 'POST', body: formData });
-            if (responce.ok) {
-                let result = await responce.json();
+            let response = await fetch('sendmail.php', { method: 'POST', body: formData });
+            console.log(response);
+            if (response.ok) {
+                alert('Sent!');
+                let result = await response.json();
                 alert(result.message);
                 form.reset();
 
