@@ -6,12 +6,13 @@
 	require 'phpmailer/src/PHPMailer.php';
 
 	$mail = new PHPMailer(true);
+	$mail->CharSet='UTF-8';
 	$mail->setLanguage('ru','phpmailer/language/');
 	$mail->IsHTML(true);
-	$mail->setFrom('www@www.com','A');
+	$mail->setFrom('info@fls.guru','A');
 	$mail->addAddress('nikita.davidov02@yandex.ru');
 	$mail->Subject('Form website');
-	$body='';
+	$body='Hi!';
 	if(trim(!empty($_POST['formMessage']))){
 		$body.='<p><strong>Message:</strong> '.$_POST['formMessage'].'</p>';
 	}
