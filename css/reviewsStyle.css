@@ -73,6 +73,9 @@ h1, h2, h3, h4, h5, h6 {
 .navigatonbar {
   width: 100%;
   background: #51504e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .navigationbat__container {
@@ -84,7 +87,10 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 75%;
-  margin: 30px auto;
+  margin-left: 20%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .navigationbar__item {
@@ -109,12 +115,53 @@ h1, h2, h3, h4, h5, h6 {
           align-items: center;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  height: 100px;
 }
 
 .navigationbar__item:hover {
   text-shadow: 0 0 1rem white;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.navigationbar__languageButtonContainer {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigationbar__languageButton {
+  min-width: 4rem;
+  min-height: 4rem;
+  border-radius: 2rem;
+  border: 2px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigationbar__languageButton:hover {
+  background-color: white;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-box-shadow: white 0px 0px 10px;
+          box-shadow: white 0px 0px 10px;
+}
+.navigationbar__languageButton:hover p {
+  color: #51504e;
 }
 
 * {
