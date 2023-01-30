@@ -137,16 +137,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 100%;
+}
+
+.contentWidthConstraint {
+  width: 75%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
 }
 
-/*.contentWidthConstraint{
-	width: 75%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-}*/
 .container {
   width: 100%;
   -webkit-box-flex: 1;
@@ -616,6 +622,15 @@ body {
   position: relative;
   color: black;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .secondBlock::before {
@@ -684,6 +699,7 @@ body {
 .listOfActions {
   width: 100%;
   height: 100%;
+  padding: 10px 0;
 }
 
 .listOfActions li {
@@ -792,6 +808,16 @@ body {
   background-color: white;
   z-index: 2;
   position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .thirdBlock__grid {
@@ -801,13 +827,14 @@ body {
   grid-template-rows: 1fr 2fr;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   height: 90%;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
 }
 
 .thirdBlock__grid > *:nth-child(1) {
@@ -889,6 +916,14 @@ body {
   padding: 20px;
 }
 
+.leitnerSystemAppBlockGrid__firstScreenWrapper {
+  width: 100%;
+}
+
+.leitnerSystemAppBlockGrid__secondScreenWrapper {
+  width: 100%;
+}
+
 .leitnerSystemAppBlockGrid__ScreenWrapper {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -903,8 +938,8 @@ body {
   position: absolute;
   padding: 0 0 55% 0;
   z-index: 3;
-  left: 100px;
-  top: 100px;
+  left: 50px;
+  top: 50px;
 }
 
 .leitnerSystemAppBlockGrid__secondScreenWrapper img {
@@ -1107,11 +1142,8 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
   }
-}
-@media (max-width: 700px) {
   .secondBlock__grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    display: block;
   }
   .thirdBlock__grid {
     display: block;
@@ -1120,12 +1152,33 @@ body {
     margin: 0 auto;
     text-align: left;
   }
-  .thirdBlock__listOfActionsWrapper {
-    margin: 10px auto;
-  }
   .thirdBlock__secondCardWrapper {
     display: none;
   }
+  .thirdCardInSecondBlock {
+    display: none;
+  }
+  .firstCardInSecondBlock {
+    display: none;
+  }
+  .secondCardInSecondBlock {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  /*.secondBlock__grid{
+  	grid-template-columns: 1fr;
+  }
+  .thirdBlock__grid{
+  	display: block;
+  }
+  .titleWrapper{
+  	margin: 0 auto;
+  	text-align: left;
+  }
+  .thirdBlock__secondCardWrapper{
+  	display: none;
+  }*/
   .additionalImage {
     z-index: 2;
     display: block;
@@ -1138,15 +1191,6 @@ body {
   }
   .contentWodthLimit {
     max-width: 60%;
-  }
-  .thirdCardInSecondBlock {
-    display: none;
-  }
-  .firstCardInSecondBlock {
-    display: none;
-  }
-  .secondCardInSecondBlock {
-    display: none;
   }
 }
 @media (max-width: 600px) {
@@ -1188,7 +1232,7 @@ body {
 }
 @media (max-width: 400px) and (orientation: portrait) {
   .fullScreenBlock {
-    height: auto;
+    height: 100%;
     width: 100%;
   }
 }

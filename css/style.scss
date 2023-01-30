@@ -16,16 +16,16 @@ body{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	height: 100%
+	min-height: 100%
 	
 }
-/*.contentWidthConstraint{
+.contentWidthConstraint{
 	width: 75%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-}*/
+}
 .container{
 	width:100%;
 	flex: 1 1 auto;
@@ -290,6 +290,9 @@ body{
 	position: relative;
 	color: black;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .secondBlock::before{
 
@@ -332,6 +335,7 @@ body{
 .listOfActions{
 	width: 100%;
 	height: 100%;
+	padding: 10px 0;
 }
 .listOfActions li{
 	color: #51504e;
@@ -414,16 +418,22 @@ body{
 	background-color: white;
 	z-index: 2;
 	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .thirdBlock__grid {
 	display: grid;
 	grid-template-rows: 1fr 2fr;
 	grid-template-columns: 1fr 1fr;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	height: 90%;
 	justify-items: center;
-	align-items: center;	
+	align-items: center;
+	padding: 10px;	
+
 }
 .thirdBlock__firstCardWrapper {}
 .thirdBlock__listOfActionsWrapper {}
@@ -473,12 +483,15 @@ body{
 	grid-area: title;
 	padding: 20px;
 }
-.leitnerSystemAppBlockGrid__firstScreenWrapper {}
-.leitnerSystemAppBlockGrid__secondScreenWrapper {}
+.leitnerSystemAppBlockGrid__firstScreenWrapper {
+	width: 100%;
+}
+.leitnerSystemAppBlockGrid__secondScreenWrapper {
+	width: 100%;
+}
 .leitnerSystemAppBlockGrid__ScreenWrapper{
 	width: 100%;
 	min-height: 100%;
-
 	grid-area: images;
 	position: relative;
 }
@@ -487,9 +500,8 @@ body{
 	position: absolute;
 	padding: 0 0 55% 0;
 	z-index: 3;
-	left: 100px;
-    top:100px;
-
+	left: 50px;
+    top:50px;
 }
 .leitnerSystemAppBlockGrid__secondScreenWrapper img{
 	height: 75%;
@@ -499,6 +511,7 @@ body{
 	position: absolute;
 	z-index: 3;
 	box-shadow: 0 0 40px white;
+
 }
 .leitnerSystemAppBlockGrid__firstScreenWrapper{
 	min-width: 100%;
@@ -666,9 +679,31 @@ body{
 		margin: 2px auto;
 		object-fit: cover;
 	}
+	.secondBlock__grid{
+		display: block;
+	}
+	.thirdBlock__grid{
+		display: block;
+	}
+	.titleWrapper{
+		margin: 0 auto;
+		text-align: left;
+	}
+	.thirdBlock__secondCardWrapper{
+		display: none;
+	}
+	.thirdCardInSecondBlock{
+		display: none;
+	}
+	.firstCardInSecondBlock{
+		display: none;
+	}
+	.secondCardInSecondBlock{
+		display: none;
+	}
 }
 @media (max-width: 700px){
-	.secondBlock__grid{
+	/*.secondBlock__grid{
 		grid-template-columns: 1fr;
 	}
 	.thirdBlock__grid{
@@ -678,12 +713,9 @@ body{
 		margin: 0 auto;
 		text-align: left;
 	}
-	.thirdBlock__listOfActionsWrapper{
-		margin: 10px auto;
-	}
 	.thirdBlock__secondCardWrapper{
 		display: none;
-	}
+	}*/
 	.additionalImage{
 		z-index: 2;
 		display: block;
@@ -697,15 +729,7 @@ body{
 	.contentWodthLimit{
 		max-width: 60%;
 	}
-	.thirdCardInSecondBlock{
-		display: none;
-	}
-	.firstCardInSecondBlock{
-		display: none;
-	}
-	.secondCardInSecondBlock{
-		display: none;
-	}
+	
 }
 @media (max-width: 600px){
 	.card2{
@@ -736,7 +760,7 @@ body{
 }
 @media (max-width: 400px) and (orientation: portrait){
 	.fullScreenBlock {
-	height: auto;
+	height: 100%;
 	width: 100%;
 	}
 }
